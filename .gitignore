@@ -1,1 +1,8 @@
 *.*#*
+*.user
+
+code/build/*
+code/.dep/*
+
+board/*.pro
+board/*.job
