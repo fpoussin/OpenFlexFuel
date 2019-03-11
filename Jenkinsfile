@@ -8,11 +8,9 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh '''git -C /var/lib/git/ChibiOS pull --rebase
-
-git config --file=.gitmodules submodule.code/ChibiOS.url /var/lib/git/ChibiOS
+        sh '''git config --file=.gitmodules submodule.code/ChibiOS.url /var/lib/git/ChibiOS
 git submodule sync
-git submodule update code/ChibiOS --init
+git submodule update --init || true
 
 git checkout .gitmodules
 git submodule sync
