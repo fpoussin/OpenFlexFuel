@@ -8,7 +8,7 @@ pipeline {
   stages {
     stage('Submodules') {
       steps {
-        sh '''cd $WORKSPACE/code
+        sh '''git submodule sync
 git submodule update --init'''
       }
     }
